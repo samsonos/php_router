@@ -37,17 +37,19 @@ interface IRouter
     public function match($template);
 
     /**
-     * Store current routes collection to file
-     * @param string $path Path to file for storing
-     * @return int Amount of routes stored
-     */
-    public function save($path);
-
-    /**
-     * Load routes collection from file
-     * @param string $path Path to file for reading
+     * Load routes collection from file or folder.
+     * If folder is passed then all files matching *Route.php would
+     * be loaded.
+     * @param string $path Path to file or folder for loading
      * @return int Amount of routes loaded
      */
     public function load($path);
+
+    /**
+     * Store current routes collection to file
+     * @param string $path Path to file for saving
+     * @return int Amount of routes saving
+     */
+    public function save($path);
 }
 
