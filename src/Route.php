@@ -43,7 +43,7 @@ class Route implements IRoute
         }
 
         // If no route name is passed - build name
-        $this->name = isset($name) ? $name : 'route.'.sizeof($this->routes);
+        $this->name = isset($name) ? strtolower($name) : 'route.'.sizeof($this->routes);
         $this->handler = $handler;
         $this->template = $template;
 

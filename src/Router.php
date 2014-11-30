@@ -33,9 +33,8 @@ class Router extends CompressableService implements IRouter
         // Get route unique name
         $name = $route->name();
 
-        // Check if this route exists
+        // Check if this route does not already exists
         if (!isset($this->routes[$name])) {
-
             // Add new route to routes collection
             $this->routes[$name] = $route;
 
