@@ -20,4 +20,10 @@ interface IRoute
      * @return bool True if route matches passed template
      */
     public function matches($template);
+
+    /**
+     * Get route unique name
+     * @return string route unique name
+     */
+    public function name();
 } 
