@@ -5,14 +5,15 @@
  * Date: 30.11.2014
  * Time: 14:57
  */
-
 namespace samson\router;
+
+use \samson\core\CompressableService;
 
 /**
  * Routing service
  * @package samson\router
  */
-class Router extends \samson\core\CompressableService implements IRouter
+class Router extends CompressableService implements IRouter
 {
     /** @var IRoute[] Collection of routes */
     protected $routes = array();
