@@ -3,16 +3,16 @@
  * Created by PhpStorm.
  * User: egorov
  * Date: 30.11.2014
- * Time: 14:57
+ * Time: 15:46
  */
-
 namespace samson\router;
 
+
 /**
- * Routing service
+ * Generic route interface
  * @package samson\router
  */
-class Router extends \samson\core\CompressableService
+interface IRoute
 {
-    
-}
+
+} 
