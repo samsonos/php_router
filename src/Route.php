@@ -31,7 +31,7 @@ class Route implements IRoute
      * @param callable      $handler    External handler
      * @param string|null   $name       Unique route name, if not passed it would be generated
      */
-    public function __construct($template, $handler, $name = null)
+    public function __construct($template, $handler, $name)
     {
         // Validate handler
         if (!is_callable($handler)) {
@@ -42,8 +42,8 @@ class Route implements IRoute
             );
         }
 
-        // If no route name is passed - build name
-        $this->name = isset($name) ? strtolower($name) : 'route.'.sizeof($this->routes);
+        // Save parameters
+        $this->name = $name;
         $this->handler = $handler;
         $this->template = $template;
 

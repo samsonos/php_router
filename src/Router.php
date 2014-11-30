@@ -27,14 +27,14 @@ class Router extends CompressableService implements IRouter
      */
     public function add($template, $handler, $name = null)
     {
-        // Create new route instance
-        $route = new Route($template, $handler, $name);
-
-        // Get route unique name
-        $name = $route->name();
+        // Create correct route name
+        $name = isset($name) ? strtolower($name) : 'route.'.sizeof($this->routes);
 
         // Check if this route does not already exists
         if (!isset($this->routes[$name])) {
+            // Create new route instance
+            $route = new Route($template, $handler, $name);
+
             // Add new route to routes collection
             $this->routes[$name] = $route;
 
