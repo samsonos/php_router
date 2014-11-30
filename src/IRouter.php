@@ -35,5 +35,19 @@ interface IRouter
      * @return IRoute|bool Found IRoute instance to be handled or false
      */
     public function match($template);
+
+    /**
+     * Store current routes collection to file
+     * @param string $path Path to file for storing
+     * @return int Amount of routes stored
+     */
+    public function save($path);
+
+    /**
+     * Load routes collection from file
+     * @param string $path Path to file for reading
+     * @return int Amount of routes loaded
+     */
+    public function load($path);
 }
 
