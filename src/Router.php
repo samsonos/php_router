@@ -15,4 +15,4 @@ namespace samson\router;
 class Router extends \samson\core\CompressableService
 {
 
-} 
+}

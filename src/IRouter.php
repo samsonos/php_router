@@ -15,4 +15,4 @@ namespace samson\router;
 interface IRouter
 {
 
-} 
+}
