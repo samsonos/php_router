@@ -32,7 +32,7 @@ interface IRouter
     /**
      * Perform route matching using template
      * @param string $template Template for matching
-     * @return IRoute|bool Found IRoute instance to be handled or false
+     * @return IRoute|bool Found IRoute instance or false
      */
     public function match($template);
 
@@ -48,7 +48,7 @@ interface IRouter
     /**
      * Store current routes collection to file
      * @param string $path Path to file for saving
-     * @return int Amount of routes saving
+     * @return int Amount of routes saved
      */
     public function save($path);
 }
