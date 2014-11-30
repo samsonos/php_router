@@ -52,7 +52,13 @@ class Router extends \samson\core\CompressableService implements IRouter
      */
     public function get($name)
     {
-        // TODO: Implement get() method.
+        $route = & $this->routes[$name];
+
+        if (isset($route)) {
+            return $route;
+        } else {
+            return false;
+        }
     }
 
     /**
