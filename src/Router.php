@@ -29,11 +29,14 @@ class Router extends \samson\core\CompressableService implements IRouter
         // Create new route instance
         $route = new Route($template, $handler, $name);
 
+        // Get route unique name
+        $name = $route->name();
+
         // Check if this route exists
         if (!isset($this->routes[$name])) {
 
             // Add new route to routes collection
-            $this->routes[] = $route;
+            $this->routes[$name] = $route;
 
             return $route;
 
