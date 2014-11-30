@@ -46,6 +46,8 @@ class Route implements IRoute
         $this->name = isset($name) ? $name : 'route.'.sizeof($this->routes);
         $this->handler = $handler;
         $this->template = $template;
+
+        // TODO: add logic to validate template
     }
 
     /**
