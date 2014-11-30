@@ -30,11 +30,11 @@ interface IRouter
     public function get($name);
 
     /**
-     * Perform route matching using template
-     * @param string $template Template for matching
+     * Perform route searching using template
+     * @param string $template Template for route search
      * @return IRoute|bool Found IRoute instance or false
      */
-    public function match($template);
+    public function search($template);
 
     /**
      * Load routes collection from file or folder.

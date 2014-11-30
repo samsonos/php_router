@@ -14,5 +14,10 @@ namespace samson\router;
  */
 interface IRoute
 {
-
+    /**
+     * Find if this route matches passed template
+     * @param string $template Template for matching
+     * @return bool True if route matches passed template
+     */
+    public function matches($template);
 } 
