@@ -47,7 +47,8 @@ class Route implements IRoute
         $this->handler = $handler;
         $this->template = $template;
 
-        // TODO: add logic to validate template
+        // TODO: add logic to validate template1
+
     }
 
     /**
